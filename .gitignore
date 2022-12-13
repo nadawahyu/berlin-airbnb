@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# personal
+data/raw/airbnb_berlin.csv
+data/raw/reviews.csv
