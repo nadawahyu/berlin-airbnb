@@ -1,0 +1,166 @@
+# Path related
+raw_dataset_dir: data/raw/
+train_set_path:
+- data/processed/x_train.pkl
+- data/processed/y_train.pkl
+valid_set_path:
+- data/processed/x_valid.pkl
+- data/processed/y_valid.pkl
+test_set_path:
+- data/processed/x_test.pkl
+- data/processed/y_test.pkl
+train_feng_set_path:
+- data/processed/x_train_feng.pkl
+- data/processed/y_train_feng.pkl
+valid_feng_set_path:
+- data/processed/x_valid_feng.pkl
+- data/processed/y_valid_feng.pkl
+test_feng_set_path:
+- data/processed/x_test_feng.pkl
+- data/processed/y_test_feng.pkl
+
+raw_dataset_path: data/processed/raw_dataset.pkl
+cleaned_raw_dataset_path: data/processed/raw_dataset.pkl
+production_model_path: models/production_model.pkl
+ohe_airbnb_path: models/ohe_stasiun.pkl
+le_encoder_path: models/le_encoder.pkl
+training_log_path: log/training_log.json
+
+# Debug related
+print_debug: true
+
+# Columns by data type related
+int64_columns:
+- accomodates
+- guests
+object_columns:
+- neighborhood
+- room_type
+- instant_bookable
+float_columns:
+- latitude
+- longitude
+- sqft
+- price
+- min_nights
+- bedrooms
+- beds
+- bathrooms
+- rating_overall
+- rating_accuracy
+- rating_cleanliness
+- rating_checkin
+- rating_communication
+- rating_location
+- rating_value
+
+# Predictors and label related
+label: price
+predictors:
+- accomodates
+- guests
+- neighborhood
+- room_type
+- instant_bookable
+- latitude
+- longitude
+- sqft
+- price
+- min_nights
+- bedrooms
+- beds
+- bathrooms
+- rating_overall
+- rating_accuracy
+- rating_cleanliness
+- rating_checkin
+- rating_communication
+- rating_location
+- rating_value
+
+# Range of data related
+label_neighborhood:
+- Steglitz - Zehlendorf
+- Pankow
+- Friedrichshain-Kreuzberg
+- Mitte
+- Lichtenberg
+- Neukoelln
+- Tempelhof - Schoeneberg
+- Reinickendorf
+- Charlottenburg-Wilm.
+- Treptow - Koepenick
+- Marzahn - Hellersdorf
+- Spandau
+range_latitude:
+- 52.3458
+- 52.65167
+range_longitude:
+- 13.09718
+- 13.75764
+label_roomtype:
+- Private room
+- Entire home/apt
+- Shared room
+range_accomodates:
+- 1
+- 16
+range_bathrooms:
+- 0
+- 8.5
+range_bedrooms:
+- 0
+- 10
+range_beds:
+- 0
+- 22
+range_sqft:
+- 0
+- 4639
+range_guests:
+- 1
+- 16
+range_nights:
+- 1
+- 1000
+range_overall:
+- 2.0
+- 10.0
+range_accuracy:
+- 2.0
+- 10.0
+range_cleanliness:
+- 2.0
+- 10.0
+range_checkin:
+- 2.0
+- 10.0
+range_comm:
+- 2.0
+- 10.0
+range_loc:
+- 2.0
+- 10.0
+range_value:
+- 2.0
+- 10.0
+label_bookable:
+- t
+- f
+label_roomtype:
+- Private room
+- Entire home/apt
+- Shared room
+
+
+# Replacement for missing value related
+missing_value_pm10:
+  BAIK: 28
+  TIDAK BAIK: 55
+missing_value_pm25:
+  BAIK: 38
+  TIDAK BAIK: 82
+missing_value_so2: 35
+missing_value_co: 11
+missing_value_o3: 29
+missing_value_no2: 18
